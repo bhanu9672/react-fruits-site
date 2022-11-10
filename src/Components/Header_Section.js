@@ -1,4 +1,6 @@
-function Header_Section( props ) {
+import { Link } from "react-router-dom";
+
+function Header_Section({ Current_Page_Title }) {
   return (
     <>
       {/* Page Header Start */}
@@ -7,24 +9,17 @@ function Header_Section( props ) {
         data-wow-delay="0.1s"
       >
         <div className="container">
-          <h1 className="display-3 mb-3 animated slideInDown"> { props.Current_Page_Title }</h1>
+          <h1 className="display-3 mb-3 animated slideInDown"> { Current_Page_Title }</h1>
           <nav aria-label="breadcrumb animated slideInDown">
             <ol className="breadcrumb mb-0">
               <li className="breadcrumb-item">
-                <a className="text-body" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="breadcrumb-item">
-                <a className="text-body" href="#">
-                  Pages
-                </a>
+                <Link className="text-body" to={"/"}>Home</Link>
               </li>
               <li
                 className="breadcrumb-item text-dark active"
                 aria-current="page"
               >
-                { props.Current_Page_Title }
+                { Current_Page_Title }
               </li>
             </ol>
           </nav>
