@@ -89,7 +89,6 @@ function Blog_Section() {
         </div>
       </div>
       {/* Blog End */}
-
     </>
   );
 }
